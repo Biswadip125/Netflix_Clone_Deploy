@@ -10,10 +10,12 @@ const usersRouter = require("./routes/usersRouter");
 require("dotenv").config();
 
 const db = require("./config/mongoose-connection");
+const _dirname = path.resolve();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
 app.use(cookieParser());
 
 // app.use(function (req, res, next) {
@@ -49,6 +51,12 @@ app.use(function (req, res, next) {
 
 app.use("/api/v1", indexRouter);
 app.use("/api/v1/users", usersRouter);
+app.use(express.static(path.join(_dirname, "/Frontend/MernAppFrontend/dist")));
+app.get("*", (_, res) => [
+  res.sendFile(
+    path.resolve(_dirname, "Frontend", "MernAppFrontend", "dist", "index.html")
+  ),
+]);
 
 app.listen(3000, () => {
   console.log("server is running http://localhost:3000/api/v1");

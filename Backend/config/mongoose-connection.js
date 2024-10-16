@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-const config = require("config");
 
 mongoose
-  .connect(`${config.get("MONGODB_URI")}/OttMernApp`)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("connected");
   })

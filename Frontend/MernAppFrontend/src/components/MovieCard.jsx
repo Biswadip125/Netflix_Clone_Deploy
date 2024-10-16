@@ -51,7 +51,7 @@ const MovieCard = ({ movie }) => {
         },
         withCredentials: true,
       });
-      console.log(res);
+
       if (res.data.success) {
         dispatch(setWatchlist(res.data.watchlist));
       }

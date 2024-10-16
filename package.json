@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "dev": "nodemon Backend/app.js",
+    "build": "npm install && npm install --prefix Frontend/MernAppFrontend  && npm run build --prefix Frontend/MernAppFrontend",
+    "start": "node Backend/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
