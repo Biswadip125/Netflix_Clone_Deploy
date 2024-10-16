@@ -58,6 +58,6 @@ app.get("*", (_, res) => [
   ),
 ]);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("server is running http://localhost:3000/api/v1");
 });
