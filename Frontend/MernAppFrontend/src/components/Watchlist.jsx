@@ -100,7 +100,7 @@ const Watchlist = () => {
   }, [tvShowsInWatchlist, dispatch]); // Depend only on tvShowsInWatchlist and dispatch
 
   return (
-    <div className="w-full h-screen bg-black text-white">
+    <div className="w-full h-auto bg-black text-white">
       <Header />
       {profileMenuToggle && <ProfileMenu />}
       {menuToggle && <Menu />}
