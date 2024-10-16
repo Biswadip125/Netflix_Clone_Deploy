@@ -9,8 +9,8 @@ import {
 } from "../utils/constant";
 
 import { setMoviesList, setTvShowsList } from "../redux/movieSlice";
-import MovieCard from "./MovieCard";
-import MovieList from "./Movielist";
+
+import MovieList from "./MovieList";
 import ProfileMenu from "./ProfileMenu";
 import Menu from "./Menu";
 
