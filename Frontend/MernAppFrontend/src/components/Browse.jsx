@@ -10,7 +10,7 @@ import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import MovieContainer from "./MovieContainer";
 import SearchMovie from "./SearchMovie.jsx";
 import useBackdropImages from "../hooks/useBackdropImages.js";
-import ProfileMenu from "./profileMenu.jsx";
+import ProfileMenu from "./ProfileMenu.jsx";
 import { fetchWatchlist } from "../utils/fetchWatchlist.js";
 import Menu from "./Menu.jsx";
 
